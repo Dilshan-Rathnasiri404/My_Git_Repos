@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS hovers transitions and shadows</title>
+    </head>
+
+    <style>
+        .subscribe-button {
+            background-color: rgb(200, 0, 0);
+            color: aliceblue;
+            height: 36px;
+            width: 102px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            margin: 8px;
+            transition: opacity 0.15s;
+        }
+
+
+        .subscribe-button:hover {
+            opacity: 0.8;
+            
+        }
+
+        .subscribe-button:active{
+            opacity: 0.5;
+
+        }
+
+
+
+
+
+        .join-button {
+            background-color: aliceblue;
+            color: rgb(41, 118, 211);
+            border-color: rgb(41, 118, 211);
+            border-style: solid;
+            height: 36px;
+            width: 62px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.15s, color 0.15s;
+
+        }
+
+        .join-button:hover {
+            background-color:rgb(41, 118, 211);
+            color: aliceblue;
+        }
+
+        .join-button:active {
+            opacity: 0.7;
+        }
+
+
+
+
+
+
+        .Tweet-button {
+            background-color: rgb(97, 94, 252);
+            border: none;
+            color: white;
+            height: 30px;
+            width: 64px;
+            border-radius: 18px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            font-style: bold;
+            transition: box-shadow 0.15s;
+        }
+
+        .Tweet-button:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+
+
+
+
+
+
+        .uber-button {
+            background-color: black;
+            color: white;
+            height: 36px;
+            width: 120px;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        } 
+        
+        .uber-button:hover {
+            opacity: 0.8;
+        }
+
+        .uber-button:active {
+            opacity: 0.6;
+        }
+        
+
+
+
+
+
+
+        .amazon-button {
+            background-color: rgb(255, 216, 20);
+            height: 36px;
+            width: 160px;
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+
+        .amazon-button:hover {
+            background-color: rgb(48, 212, 48);
+        }
+
+        .amazon-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+
+
+
+        .signup-button {
+            background-color: rgb(46, 164, 79);
+            border: none;
+            border-radius: 8px;
+            height: 36px;
+            width: 105px;
+            color: white;
+            font-style: bold;
+            font-size: medium;
+            cursor: pointer;
+            transition: 0.15s;
+            
+        }
+
+
+        .signup-button:hover {
+            box-shadow: 0 2px 5px rgba(0, 5, 0, 0.3);
+            
+        }
+
+        .signup-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+
+
+        .getstarted-button {
+            color: white;
+            background-color: rgb(121, 82, 179);
+            height: 36px;
+            width: 115px;
+            border-radius: 5px;
+            border: none;
+            font-style: bold;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.15s;
+
+        }
+
+        .getstarted-button:hover{
+            background-color:rgb(100, 69, 146);
+            
+        }
+
+        .getstarted-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+        .download-button {
+            color: rgb(108, 117, 125);
+            background-color: white;
+            height: 36px;
+            width: 100px;
+            border-radius: 5px;
+            border-style: solid;
+            margin-left: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.15s;
+        }
+
+        .download-button:hover {
+            background-color: rgb(108, 117, 125) ;
+            color: white;
+            border-color:  rgb(108, 117, 125);
+        }
+
+        .download-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+        .applyoncompanywebsite-button {
+            background-color: rgb(10, 102, 194);
+            color: white;
+            font-weight: 580;
+            font-size: large;
+            height: 40px;
+            width: 280px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .applyoncompanywebsite-button:hover {
+            background-color:rgb(13, 87, 161) ;
+        }
+
+        .applyoncompanywebsite-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+        .save-button {
+            background-color: white;
+            color: rgb(10, 102, 194);
+            border-color: rgb(10, 102, 194);
+            border-style:solid;
+            height: 40px;
+            width: 80px;
+            border-radius: 20px;
+            border-width: 1px;
+            font-weight: 580;
+            font-size: large;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .save-button:hover {
+            border-width: 2px;
+            background-color: rgb(235, 237, 248);
+        }
+
+        .save-button:active {
+            border: none;
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+
+
+        .challenge-h2 {
+            color: red;
+            font-style: normal;
+        }
+        
+        .backtoamazon-a {
+            color: rgb(0, 113, 133);
+            font-weight: 580;
+        }
+
+        .backtoamazon-a:hover {
+            color: rgb(238, 9, 9);
+            
+        }
+
+
+
+
+
+
+        
+        .nike-p {
+            color: black;
+            font-size: x-large;
+            font-weight: 800;
+        }
+
+        .price-p {
+            color: rgb(0, 118, 0);
+        }
+
+        .addtocart-button {
+            height: 36px;
+            width: 120px;
+            background-color: rgb(255, 216, 20);
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.15s;
+        }
+
+        .addtocart-button:hover {
+            background-color: rgb(228, 194, 27);
+        }
+
+        .addtocart-button:active {
+            opacity: 0.6;
+        }
+
+
+        
+
+
+
+        .buynow-button {
+            height: 36px;
+            width: 120px;
+            background-color: rgb(255, 164, 28);
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.15s;
+        }
+
+        .buynow-button:hover{
+            background-color: rgb(228, 142, 14);
+        }
+
+        .buynow-button:active {
+            opacity: 0.5;
+        }
+
+
+    
+    </style>
+
+
+    <button class="subscribe-button">SUBSCRIBE</button>
+    <button class="join-button">JOIN</button>
+    <button class="Tweet-button">Tweet</button>
+
+    <hr>
+    <h1>Lesson 3 Exercises - CSS</h1>
+    <h2>Hovers, Transitions and shadows</h2>
+
+    <br>
+    <p>2a. Uber</p>
+    <button class="uber-button">Request now</button>
+    <br>
+
+    <br>
+    <p>2b. Amazon</p>
+    <button class="amazon-button">Add to Cart</button>
+    <br><br>
+
+    <p>2c. GitHub</p>
+    <button class="signup-button">Sign up</button>
+
+    <br><br>
+    <p>2d. Bootsrap</p>
+    <button class="getstarted-button">Get started</button>
+    <button class="download-button">Download</button>
+    
+    <br><br>
+    <p>2e. LinkedIn</p>
+    <button class="applyoncompanywebsite-button">Apply on company website</button>
+    <button class="save-button">Save</button>
+
+ 
+    <hr>
+    <h2 class="challenge-h2">Challenge Exercise</h2>
+
+    <br><br>
+    <a href="https://www.amazon.com" target="_blank"  class="backtoamazon-a">Back to Amazon</a>
+    
+    <p class="nike-p">
+        Nike Black Running Shoes 
+    </p>
+
+    <p class="price-p">
+        $39 - in stock.
+    </p>
+
+    <p>
+        Free Delivery tomorrow.
+    </p>
+    <button class="addtocart-button">Add to Cart</button>
+    <button class="buynow-button">Buy now</button>
+
+</html>
