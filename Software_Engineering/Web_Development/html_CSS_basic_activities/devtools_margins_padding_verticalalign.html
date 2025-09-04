@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>devtools + padding + margin + vertical-align </title>
+    </head>
+
+    <style>
+        .subscribe-button {
+            background-color: rgb(200, 0, 0);
+            color: aliceblue;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+
+            margin-left: 10px;
+            margin-right: 20px;
+            margin-top: 12px;
+            margin-bottom: 10px;
+
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            vertical-align: top;
+
+        }
+
+        .subscribe-button:hover {
+            opacity: 0.8;
+            
+        }
+
+        .subscribe-button:active{
+            opacity: 0.5;
+
+        }
+
+
+
+
+
+
+
+        .join-button {
+            background-color: aliceblue;
+            color: rgb(41, 118, 211);
+            border-color: rgb(41, 118, 211);
+            border-style: solid;
+            border-radius: 2px;
+            cursor: pointer;
+
+            margin-left: 10px;
+            margin-right: 15px;
+            margin-top: 12px;
+            margin-bottom: 10px;
+            
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+            vertical-align: middle;
+        }
+
+        .join-button:hover {
+            background-color:rgb(41, 118, 211);
+            color: aliceblue;
+        }
+
+        .join-button:active {
+            opacity: 0.7;
+        }
+
+
+
+
+
+
+
+        .Tweet-button {
+            background-color: rgb(97, 94, 252);
+            border: none;
+            color: white;
+            border-radius: 18px;
+            cursor: pointer;
+            font-size: 15px;
+
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 12px;
+            margin-bottom: 10px;
+
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+
+            vertical-align: middle;
+        }
+
+        .Tweet-button:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+
+        
+        
+        
+        
+        
+        .uber-button {
+            background-color: black;
+            color: white;
+
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        } 
+        
+        .uber-button:hover {
+            opacity: 0.8;
+        }
+
+        .uber-button:active {
+            opacity: 0.6;
+        }
+        
+
+
+
+
+
+
+        .amazon-button {
+            background-color: rgb(255, 216, 20);
+            
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.15s;
+        }
+
+        .amazon-button:hover {
+            background-color: rgb(48, 212, 48);
+        }
+
+        .amazon-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+
+
+
+        .signup-button {
+            background-color: rgb(46, 164, 79);
+            border: none;
+            border-radius: 8px;
+
+            padding-left: 26px;
+            padding-right: 26px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+           
+            color: white;
+            font-style: bold;
+            font-size: medium;
+            cursor: pointer;
+            transition: 0.15s;
+            
+        }
+
+
+        .signup-button:hover {
+            box-shadow: 0 2px 5px rgba(0, 5, 0, 0.3);
+            
+        }
+
+        .signup-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+        .getstarted-button {
+            color: white;
+            background-color: rgb(121, 82, 179);
+
+            padding-left:29px;
+            padding-right:29px;
+            padding-top:9px;
+            padding-bottom: 9px;
+           
+            border-radius: 5px;
+            border: none;
+            font-style: bold;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.15s;
+
+        }
+
+        .getstarted-button:hover{
+            background-color:rgb(100, 69, 146);
+            
+        }
+
+        .getstarted-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+        .download-button {
+            color: rgb(108, 117, 125);
+            background-color: white;
+
+            padding-left:25px;
+            padding-right:25px;
+            padding-top:9px;
+            padding-bottom:9px;
+
+            border-radius: 5px;
+            border-style: solid;
+            margin-left: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.15s;
+        }
+
+        .download-button:hover {
+            background-color: rgb(108, 117, 125) ;
+            color: white;
+            border-color:  rgb(108, 117, 125);
+        }
+
+        .download-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+        .applyoncompanywebsite-button {
+            background-color: rgb(10, 102, 194);
+            color: white;
+            font-weight: 580;
+            font-size: large;
+
+            padding-left:70px;
+            padding-right:70px;
+            padding-top:10px;
+            padding-bottom:10px;
+           
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .applyoncompanywebsite-button:hover {
+            background-color:rgb(13, 87, 161) ;
+        }
+
+        .applyoncompanywebsite-button:active {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+        .save-button {
+            background-color: white;
+            color: rgb(10, 102, 194);
+            border-color: rgb(10, 102, 194);
+            border-style:solid;
+
+            padding-left:20px;
+            padding-right:20px;
+            padding-top:10px;
+            padding-bottom:10px;
+          
+            border-radius: 20px;
+            border-width: 1px;
+            font-weight: 580;
+            font-size: large;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        .save-button:hover {
+            border-width: 2px;
+            background-color: rgb(235, 237, 248);
+        }
+
+        .save-button:active {
+            border: none;
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+
+
+        .challenge-h2 {
+            color: red;
+            font-style: normal;
+        }
+        
+        .backtoamazon-a {
+            color: rgb(0, 113, 133);
+            font-weight: 580;
+        }
+
+        .backtoamazon-a:hover {
+            color: rgb(238, 9, 9);
+            
+        }
+
+
+
+
+
+
+        
+        .nike-p {
+            color: black;
+            font-size: x-large;
+            font-weight: 800;
+        }
+
+        .price-p {
+            color: rgb(0, 118, 0);
+        }
+
+        .addtocart-button {
+            height: 36px;
+            width: 120px;
+            background-color: rgb(255, 216, 20);
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            transition: 0.15s;
+        }
+
+        .addtocart-button:hover {
+            background-color: rgb(228, 194, 27);
+        }
+
+        .addtocart-button:active {
+            opacity: 0.6;
+        }
+
+
+        
+
+
+
+        .buynow-button {
+            height: 36px;
+            width: 120px;
+            background-color: rgb(255, 164, 28);
+            border-radius: 18px;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.15s;
+        }
+
+        .buynow-button:hover{
+            background-color: rgb(228, 142, 14);
+        }
+
+        .buynow-button:active {
+            opacity: 0.5;
+        }
+
+
+
+
+
+        .updateTweet-button {
+            background:#1DA1F2;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 18px; 
+            padding: .5rem .9rem;
+            color: #fff;
+            cursor: pointer;
+
+            font: 700 14px/1 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            letter-spacing: .01em;
+            box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        }
+
+        .updateTweet-button :hover {background-color:  #8132ff;}
+        .updateTweet-button :active { filter: brightness(.9); }
+        .updateTweet-button :focus-visible {
+            outline: 2px solid rgba(29,161,242,.35);
+            outline-offset: 2px;
+        }
+
+
+
+
+
+
+
+
+              /* Base button reset */
+        .tweet-btn {
+            --tw-blue-2012: #00aced;      /* primary */
+            --tw-blue-2012-dark: #0084b4; /* border/active */
+            --tw-blue-2012-grad-top: #55d3ff;
+            --tw-blue-2012-grad-bot: #00aced;
+
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            border: 1px solid var(--tw-blue-2012-dark);
+            border-radius: 18px;
+            padding: .4rem .75rem;
+            font: 600 14px/1.1 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+            color: #fff;
+            background: linear-gradient(#fff0, #fff0), /* placeholder for potential overlay */
+              linear-gradient(to bottom, var(--tw-blue-2012-grad-top), var(--tw-blue-2012-grad-bot));
+            box-shadow:
+            inset 0 1px 0 rgba(255,255,255,.35),  /* top highlight */
+            0 1px 0 rgba(0,0,0,.05);              /* subtle outer */
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased;
+            text-decoration: none;
+        }
+
+      
+        .tweet-btn__label { display: inline-block; }
+
+        /* Hover: deepen the gradient */
+        .tweet-btn--glossy:hover {
+            background: linear-gradient(to bottom, #37c5ff, var(--tw-blue-2012));
+        }
+
+        /* Active: pressed look */
+        .tweet-btn--glossy:active {
+            background: linear-gradient(to bottom, var(--tw-blue-2012), var(--tw-blue-2012-dark));
+            box-shadow:
+            inset 0 2px 3px rgba(0,0,0,.2);
+            transform: translateY(0); /* keep stable */
+        }
+
+        /* Focus ring for accessibility */
+        .tweet-btn--glossy:focus-visible {
+            outline: 2px solid rgba(0,172,237,.35);
+            outline-offset: 2px;
+        }
+
+        /* Disabled state */
+        .tweet-btn--glossy:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+        }
+
+
+    </style>
+
+   
+   
+   
+    <body>
+
+        <button class="subscribe-button">SUBSCRIBE</button>
+        <button class="join-button">JOIN</button>
+        <button class="Tweet-button">Tweet</button>
+
+        <hr>
+        <h1>Lesson 4 Exercises </h1>
+        <h3 style="color: rgb(120, 120, 231);"> Dev Tools and CSS Box Model </h3>
+
+
+         <br>
+         <p>4a. Uber</p>
+         <button class="uber-button">Request now</button>
+         <br>
+
+         <br>
+         <p>4b. Amazon</p>
+         <button class="amazon-button">Add to Cart</button>
+         <br><br>
+
+         <p>4c. GitHub</p>
+         <button class="signup-button">Sign up</button>
+
+         <br><br>
+         <p>4d. Bootsrap</p>
+         <button class="getstarted-button">Get started</button>
+         <button class="download-button">Download</button>
+    
+         <br><br>
+         <p>4e. LinkedIn</p>
+         <button class="applyoncompanywebsite-button">Apply on company website</button>
+         <button class="save-button">Save</button>
+
+         <br><br>
+         <p>4f. Update the Tweet button to use padding instead of Height/Width</p>
+         <p>i.</p>
+         <button class="tweet-btn">Tweet</button>
+
+         <p>ii.</p>
+         <button class="updateTweet-button">Tweet</button>
+         <br>
+        
+
+         <br><br>
+         <p>4g. Use the Chrome DevTools to get the exact color for the Subscribe button and update it in the code.</p><br>
+         <button>Subscribe</button>
+
+         <br>
+         <hr>
+         <h2 class="challenge-h2">Challenge Exercise</h2>
+
+
+    </body>
+</html>
