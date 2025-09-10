@@ -1,0 +1,34 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main() {
+    string task;
+    char choice;
+
+    cout << "📝 Simple To-Do List 📝\n";
+    cout << "Do you want to add a task? (y/n): ";
+    cin >> choice;
+    cin.ignore(); // ignore newline
+
+    if(choice == 'y' || choice == 'Y') {
+        cout << "Enter your task: ";
+        getline(cin, task);
+
+        ofstream file("tasks.txt", ios::app);
+        file << task << endl;
+        file.close();
+
+        cout << "Task added successfully!\n";
+    }
+
+    cout << "\nHere are your tasks:\n";
+    ifstream file("tasks.txt");
+    while(getline(file, task)) {
+        cout << "- " << task << endl;
+    }
+    file.close();
+
+    return 0;
+}
