@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string name;
+    int subjects;
+    double total = 0, marks;
+
+    cout << "📘 Student Report Card System 📘\n";
+    cout << "Enter student name: ";
+    getline(cin, name);
+
+    cout << "Enter number of subjects: ";
+    cin >> subjects;
+
+    for(int i=1; i<=subjects; i++) {
+        cout << "Enter marks for subject " << i << ": ";
+        cin >> marks;
+        total += marks;
+    }
+
+    double average = total / subjects;
+    char grade;
+
+    if(average >= 90) grade = 'A';
+    else if(average >= 75) grade = 'B';
+    else if(average >= 60) grade = 'C';
+    else if(average >= 50) grade = 'D';
+    else grade = 'F';
+
+    cout << "\n📊 Report Card for " << name << " 📊\n";
+    cout << "Total Marks: " << total << endl;
+    cout << "Average: " << average << endl;
+    cout << "Grade: " << grade << endl;
+
+    return 0;
+}
