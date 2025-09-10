@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double temp;
+    char choice;
+
+    cout << "🌡️ Temperature Converter 🌡️\n";
+    cout << "Enter temperature value: ";
+    cin >> temp;
+
+    cout << "Convert to (C)elsius, (F)ahrenheit, or (K)elvin? ";
+    cin >> choice;
+
+    switch(toupper(choice)) {
+        case 'C':
+            cout << "Celsius: " << temp << "°C\n";
+            cout << "Fahrenheit: " << (temp * 9/5) + 32 << "°F\n";
+            cout << "Kelvin: " << temp + 273.15 << "K\n";
+            break;
+        case 'F':
+            cout << "Celsius: " << (temp - 32) * 5/9 << "°C\n";
+            cout << "Fahrenheit: " << temp << "°F\n";
+            cout << "Kelvin: " << (temp - 32) * 5/9 + 273.15 << "K\n";
+            break;
+        case 'K':
+            cout << "Celsius: " << temp - 273.15 << "°C\n";
+            cout << "Fahrenheit: " << (temp - 273.15) * 9/5 + 32 << "°F\n";
+            cout << "Kelvin: " << temp << "K\n";
+            break;
+        default:
+            cout << "Invalid choice!\n";
+    }
+
+    return 0;
+}
