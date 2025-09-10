@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int score = 0;
+    char answer;
+
+    cout << "❓ Simple Quiz Game ❓\n";
+
+    cout << "Q1: What is the capital of France?\n";
+    cout << "a) Paris  b) London  c) Rome\n";
+    cin >> answer;
+    if(answer == 'a' || answer == 'A') score++;
+
+    cout << "Q2: 5 + 7 = ?\n";
+    cout << "a) 12  b) 10  c) 14\n";
+    cin >> answer;
+    if(answer == 'a' || answer == 'A') score++;
+
+    cout << "Q3: Which language is C++ derived from?\n";
+    cout << "a) Java  b) C  c) Python\n";
+    cin >> answer;
+    if(answer == 'b' || answer == 'B') score++;
+
+    cout << "\n🏆 Your Score: " << score << "/3\n";
+
+    return 0;
+}
