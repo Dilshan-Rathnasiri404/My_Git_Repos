@@ -1,0 +1,30 @@
+// hashCalculator.js
+import fs from "fs";
+import crypto from "crypto";
+
+// Get file path from command-line argument
+const filePath = process.argv[2];
+
+if (!filePath) {
+  console.error("❌ Please provide a file path.\nUsage: node hashCalculator.js <file>");
+  process.exit(1);
+}
+
+// Read file
+const fileBuffer = fs.readFileSync(filePath);
+
+// Function to generate hash
+function generateHash(algorithm, buffer) {
+  return crypto.createHash(algorithm).update(buffer).digest("hex");
+}
+
+// Calculate hashes
+const md5 = generateHash("md5", fileBuffer);
+const sha1 = generateHash("sha1", fileBuffer);
+const sha512 = generateHash("sha512", fileBuffer);
+
+// Print results
+console.log(`📄 File: ${filePath}`);
+console.log(`🔑 MD5:    ${md5}`);
+console.log(`🔑 SHA-1:  ${sha1}`);
+console.log(`🔑 SHA-512:${sha512}`);
