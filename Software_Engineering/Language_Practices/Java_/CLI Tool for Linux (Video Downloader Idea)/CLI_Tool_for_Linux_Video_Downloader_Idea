@@ -1,0 +1,21 @@
+import java.io.IOException;
+
+public class LinuxVideoDownloader {
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Usage: java -jar VideoDownloader.jar <video_url>");
+            return;
+        }
+
+        String url = args[0];
+        try {
+            ProcessBuilder pb = new ProcessBuilder("yt-dlp", url);
+            pb.inheritIO(); // Forward output to terminal
+            Process process = pb.start();
+            process.waitFor();
+            System.out.println("✅ Download complete!");
+        } catch (IOException | InterruptedException e) {
+            System.err.println("❌ Error: " + e.getMessage());
+        }
+    }
+}
