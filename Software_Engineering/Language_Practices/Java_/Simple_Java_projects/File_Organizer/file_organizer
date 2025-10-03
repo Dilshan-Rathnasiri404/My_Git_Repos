@@ -1,0 +1,60 @@
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
+public class FileOrganizer {
+
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Usage: java FileOrganizer <directory-path>");
+            return;
+        }
+
+        String folderPath = args[0];
+        File folder = new File(folderPath);
+
+        if (!folder.exists() || !folder.isDirectory()) {
+            System.out.println("Error: Provided path is not a valid directory.");
+            return;
+        }
+
+        File[] files = folder.listFiles();
+        if (files == null) {
+            System.out.println("Error: Could not read files from directory.");
+            return;
+        }
+
+        for (File file : files) {
+            if (file.isFile()) {
+                String fileName = file.getName();
+                String fileType = getFileType(fileName);
+                File newDir = new File(folderPath + File.separator + fileType);
+
+                if (!newDir.exists()) {
+                    newDir.mkdir();
+                }
+
+                try {
+                    Files.move(file.toPath(),
+                               new File(newDir + File.separator + fileName).toPath(),
+                               StandardCopyOption.REPLACE_EXISTING);
+                    System.out.println("Moved: " + fileName + " -> " + newDir.getName());
+                } catch (IOException e) {
+                    System.out.println("Failed to move: " + fileName);
+                }
+            }
+        }
+
+        System.out.println("✅ File organization completed!");
+    }
+
+    private static String getFileType(String fileName) {
+        String lower = fileName.toLowerCase();
+        if (lower.endsWith(".jpg") || lower.endsWith(".png") || lower.endsWith(".gif")) return "Images";
+        if (lower.endsWith(".pdf") || lower.endsWith(".docx") || lower.endsWith(".txt")) return "Documents";
+        if (lower.endsWith(".mp4") || lower.endsWith(".mkv") || lower.endsWith(".avi")) return "Videos";
+        if (lower.endsWith(".mp3") || lower.endsWith(".wav")) return "Music";
+        return "Others";
+    }
+}
